@@ -50,6 +50,7 @@ export default function ItineraryPresentation() {
       title: "La Trinidad + Art & Views",
       location: "La Trinidad & Valley of Colors",
       activities: [
+        
         { time: "5:00 AM", activity: "Morning jog Camp John Hay", icon: "🏃" },
         { time: "7:00 AM", activity: "La Trinidad Strawberry Farm", icon: "🍓" },
         { time: "9:00 AM", activity: "Bell Church", icon: "💒" },
@@ -153,7 +154,7 @@ export default function ItineraryPresentation() {
           </div>
 
           {/* Navigation */}
-          <div className="flex items-center justify-center gap-6 mt-6 flex-wrap">
+          <div className="flex items-center justify-center gap-6 mt-6 flex-wrap flex-col sm:flex-row">
             <button
               onClick={prevSlide}
               className="flex items-center gap-2 px-4 py-2 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
