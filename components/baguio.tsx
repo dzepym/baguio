@@ -51,6 +51,7 @@ export default function ItineraryPresentation() {
       location: "La Trinidad & Valley of Colors",
       activities: [
         
+        
         { time: "5:00 AM", activity: "Morning jog Camp John Hay", icon: "🏃" },
         { time: "7:00 AM", activity: "La Trinidad Strawberry Farm", icon: "🍓" },
         { time: "9:00 AM", activity: "Bell Church", icon: "💒" },
@@ -158,7 +159,7 @@ export default function ItineraryPresentation() {
             <div className="flex flex-col gap-4">
               <button
                 onClick={prevSlide}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
+                className="flex flex-col items-center gap-2 px-4 py-2 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg text-center"
                 style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
               >
                 <ChevronLeft className="w-6 h-6 text-black" strokeWidth={3} />
@@ -166,7 +167,7 @@ export default function ItineraryPresentation() {
               </button>
               <button
                 onClick={nextSlide}
-                className="flex items-center gap-2 px-4 py-2 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
+                className="flex flex-col items-center gap-2 px-4 py-2 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg text-center"
                 style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
               >
                 <span>Next</span>
@@ -197,7 +198,7 @@ export default function ItineraryPresentation() {
         </div>
 
         {/* Interactive Image Gallery */}
-        <div className="grid grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
           {currentDay.images.map((img, idx) => (
             <div
               key={idx}
