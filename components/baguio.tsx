@@ -156,22 +156,22 @@ export default function ItineraryPresentation() {
 
           {/* Navigation */}
           <div className="flex items-center justify-center gap-6 mt-6 flex-wrap flex-col sm:flex-row">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-row gap-2 sm:flex-col sm:gap-4">
               <button
                 onClick={prevSlide}
-                className="flex flex-col items-center gap-2 px-4 py-2 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg text-center"
+                className="flex flex-col items-center gap-1 px-2 py-1 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-xs sm:px-6 sm:py-3 sm:text-lg text-center"
                 style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
               >
-                <ChevronLeft className="w-6 h-6 text-black" strokeWidth={3} />
+                <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-black" strokeWidth={3} />
                 <span>Previous</span>
               </button>
               <button
                 onClick={nextSlide}
-                className="flex flex-col items-center gap-2 px-4 py-2 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg text-center"
+                className="flex flex-col items-center gap-1 px-2 py-1 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-xs sm:px-6 sm:py-3 sm:text-lg text-center"
                 style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
               >
                 <span>Next</span>
-                <ChevronRight className="w-6 h-6 text-black" strokeWidth={3} />
+                <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-black" strokeWidth={3} />
               </button>
             </div>
 
