@@ -124,23 +124,23 @@ export default function ItineraryPresentation() {
       <header className="relative z-10 p-6 md:p-8 text-center">
         <div className="inline-block">
           <h1 className="text-5xl md:text-7xl font-black text-gray-800 mb-2 relative inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-            Saan?
-            <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8">
-              <path d="M5,5 Q150,0 295,5" stroke="#FFD93D" strokeWidth="6" fill="none" strokeLinecap="round" />
-            </svg>
-          </h1>
-        </div>
-        <p className="text-gray-600 mt-4 text-lg font-medium">sa kalsada ng Baguio City with Rienell!</p>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 md:px-8 pb-20 relative z-10">
-        {/* Day Header */}
-        <div className="mb-8 text-center animate-bounce-in">
-          <div 
-            className="inline-block px-8 py-4 rounded-full text-gray-800 font-black text-2xl mb-4 border-4 border-gray-800 transform -rotate-2 shadow-lg"
-            style={{ 
-              backgroundColor: currentDay.color,
+              <div
+                key={idx}
+                className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 p-5 rounded-2xl border-3 border-gray-800 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: ['#FFE5B4', '#E0BBE4', '#B4E7FF', '#C7FFED', '#FFDFD3'][idx % 5],
+                  animationDelay: `${idx * 100}ms`
+                }}
+              >
+                <div className="text-5xl mb-2 sm:mb-0 transform hover:scale-125 transition-transform">{activity.icon}</div>
+                <div className="flex flex-col items-center sm:items-start flex-1">
+                  <div className="flex items-center gap-2 text-gray-800 font-black mb-1">
+                    <Clock className="w-5 h-5" strokeWidth={3} />
+                    <span className="text-lg">{activity.time}</span>
+                  </div>
+                  <p className="text-gray-700 text-lg font-bold text-center sm:text-left">{activity.activity}</p>
+                </div>
+              </div>
               boxShadow: '4px 4px 0px rgba(0,0,0,0.2)'
             }}
           >
@@ -156,10 +156,10 @@ export default function ItineraryPresentation() {
 
           {/* Navigation */}
           <div className="flex items-center justify-center gap-6 mt-6 flex-wrap flex-col sm:flex-row">
-            <div className="flex flex-row gap-2 sm:flex-col sm:gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row sm:gap-2">
               <button
                 onClick={prevSlide}
-                className="flex flex-col items-center gap-1 px-2 py-1 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-xs sm:px-6 sm:py-3 sm:text-lg text-center"
+                className="flex flex-col items-center gap-1 w-full sm:w-auto px-2 py-1 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-xs sm:px-6 sm:py-3 sm:text-lg text-center"
                 style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
               >
                 <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-black" strokeWidth={3} />
@@ -167,7 +167,7 @@ export default function ItineraryPresentation() {
               </button>
               <button
                 onClick={nextSlide}
-                className="flex flex-col items-center gap-1 px-2 py-1 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-xs sm:px-6 sm:py-3 sm:text-lg text-center"
+                className="flex flex-col items-center gap-1 w-full sm:w-auto px-2 py-1 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-xs sm:px-6 sm:py-3 sm:text-lg text-center"
                 style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
               >
                 <span>Next</span>
