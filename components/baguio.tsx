@@ -155,14 +155,24 @@ export default function ItineraryPresentation() {
 
           {/* Navigation */}
           <div className="flex items-center justify-center gap-6 mt-6 flex-wrap flex-col sm:flex-row">
-            <button
-              onClick={prevSlide}
-              className="flex items-center gap-2 px-4 py-2 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
-              style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
-            >
-              <ChevronLeft className="w-6 h-6 text-black" strokeWidth={3} />
-              <span>Previous</span>
-            </button>
+            <div className="flex flex-col gap-4">
+              <button
+                onClick={prevSlide}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
+                style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
+              >
+                <ChevronLeft className="w-6 h-6 text-black" strokeWidth={3} />
+                <span>Previous</span>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="flex items-center gap-2 px-4 py-2 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
+                style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
+              >
+                <span>Next</span>
+                <ChevronRight className="w-6 h-6 text-black" strokeWidth={3} />
+              </button>
+            </div>
 
             <div className="flex gap-2 sm:gap-4 flex-wrap">
               {itinerary.map((day, idx) => (
@@ -183,15 +193,6 @@ export default function ItineraryPresentation() {
                 </button>
               ))}
             </div>
-
-            <button
-              onClick={nextSlide}
-              className="flex items-center gap-2 px-4 py-2 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
-              style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
-            >
-              <span>Next</span>
-              <ChevronRight className="w-6 h-6 text-black" strokeWidth={3} />
-            </button>
           </div>
         </div>
 
