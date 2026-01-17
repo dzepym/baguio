@@ -71,6 +71,7 @@ export default function ItineraryPresentation() {
     {
       day: 3,
       title: "Last day?",
+      subtext: "Huwag Muna Tayong Umuwi...",
       location: "Dragon Castle & Panagbenga Park",
       activities: [
         { time: "5:00 AM", activity: "Morning jog at Panagbenga Park", icon: "🏃" },
@@ -144,9 +145,12 @@ export default function ItineraryPresentation() {
           >
             DAY {currentDay.day}
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-800 mb-3" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-800 mb-1" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
             {currentDay.title}
           </h2>
+          {currentDay.subtext && (
+            <div className="text-lg text-gray-500 mb-2 animate-fade-in">{currentDay.subtext}</div>
+          )}
           <div className="flex items-center justify-center gap-2 text-gray-700 text-lg font-bold mb-6">
             <MapPin className="w-6 h-6" strokeWidth={3} />
             <span>{currentDay.location}</span>
@@ -163,7 +167,7 @@ export default function ItineraryPresentation() {
               <span>Previous</span>
             </button>
 
-            <div className="flex gap-2 sm:gap-4 flex-wrap">
+            <div className="hidden sm:flex gap-2 sm:gap-4 flex-wrap">
               {itinerary.map((day, idx) => (
                 <button
                   key={idx}
@@ -195,7 +199,7 @@ export default function ItineraryPresentation() {
         </div>
 
         {/* Interactive Image Gallery */}
-        <div className="grid grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
           {currentDay.images.map((img, idx) => (
             <div
               key={idx}
