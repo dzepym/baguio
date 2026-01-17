@@ -1,11 +1,25 @@
 'use client';
 
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight, MapPin, Clock, Calendar, Bus, Camera, UtensilsCrossed } from 'lucide-react';
+import { useState, useEffect } from 'react'; // Added useEffect
+import { ChevronLeft, ChevronRight, MapPin, Clock, Calendar, Camera } from 'lucide-react';
+
+// 1. Define the type for your images
+interface GalleryImage {
+  url: string;
+  alt: string;
+}
 
 export default function ItineraryPresentation() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(null);
+  
+  // 2. Fix the 'never' error by giving the state a type
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+
+  // 3. Fix Hydration Error: Only show doodles after the page loads on the client
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const itinerary = [
     {

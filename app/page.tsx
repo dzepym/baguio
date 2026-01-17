@@ -1,4 +1,4 @@
-import ItineraryPresentation from '@/components/baguio';
+import ItineraryPresentation from '../components/baguio';
 
 export default function Home() {
   return (
