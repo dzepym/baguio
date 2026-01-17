@@ -34,13 +34,14 @@ export default function ItineraryPresentation() {
         { time: "2:00 PM", activity: "Hotel Check-in & quick rest", icon: "🏨" },
         { time: "3:00 PM", activity: "Baguio Botanical Garden", icon: "🌸" },
         { time: "5:00 PM", activity: "Mines View Park", icon: "🌄" },
-        { time: "6:00 PM", activity: "SM City Baguio", icon: "🛍️" },
+            { time: "6:00 PM", activity: "SM City Baguio", icon: "🏬" },
+            { time: "8:00 PM", activity: "Sky Ranch Baguio", icon: "🎡" },
         { time: "9:00 PM", activity: "Baguio Night Market", icon: "🌙" }
       ],
       images: [
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Session_Road_Baguio_City.jpg", alt: "Session Road lined with shops and buildings" },
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Baguio_Cathedral_2018.jpg", alt: "Front view of Baguio Cathedral with pink facade" },
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Baguio_Botanical_Garden_2018.jpg", alt: "Entrance to Baguio Botanical Garden" }
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b618aa3e58af5a5f820d4_session-road.jpg", alt: "Session Road" },
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b6189e57f9d48d42e8d53_baguio-cathedral.JPG", alt: "Baguio Cathedral" },
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b6189168b7c42038d22f3_baguio-botanical.jpg", alt: "Baguio Botanical Garden" }
       ],
       color: "#FFB5E8"
     },
@@ -53,16 +54,17 @@ export default function ItineraryPresentation() {
         { time: "7:00 AM", activity: "La Trinidad Strawberry Farm", icon: "🍓" },
         { time: "9:00 AM", activity: "Bell Church", icon: "💒" },
         { time: "9:30 AM", activity: "Valley of Colors", icon: "🎨" },
-        { time: "10:00 AM", activity: "Burnham Park", icon: "🏞️" },
+          { time: "10:00 AM", activity: "Burnham Park", icon: "🏞️" },
+          { time: "12:00 PM", activity: "Tam-awan Village", icon: "🎨" },
         { time: "2:00 PM", activity: "Igorot Stone Kingdom", icon: "🗿" },
         { time: "4:00 PM", activity: "Mirador Heritage and Eco Park & Our Lady of Lourdes Grotto", icon: "🗻" },
         { time: "6:00 PM", activity: "Camp John Hay", icon: "🏕️" },
         { time: "9:00 PM", activity: "Night Market", icon: "🌙" }
       ],
       images: [
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Strawberry_Farm_La_Trinidad_Benguet.jpg", alt: "Rows of strawberries at La Trinidad Strawberry Farm" },
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Valley_of_Colors_La_Trinidad.jpg", alt: "Colorful hillside houses at Valley of Colors" },
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Burnham_Park_Baguio.jpg", alt: "Lake and boats at Burnham Park" }
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b5f4a0c869ebf8446a729_baguio%20(8).jpg", alt: "La Trinidad Strawberry Farm" },
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b5f4b0588334cb077487b_baguio%20(7).jpg", alt: "Valley of Colors" },
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b5f4a1286a0abdf5bc13e_baguio%20(1).jpg", alt: "Burnham Park" }
       ],
       color: "#B5DEFF"
     },
@@ -72,14 +74,17 @@ export default function ItineraryPresentation() {
       location: "Dragon Castle & Burnham Park",
       activities: [
         { time: "5:00 AM", activity: "Morning jog at Camp John Hay", icon: "🏃" },
-        { time: "8:00 AM", activity: "Dragon Castle", icon: "🐉" },
-        { time: "10:00 AM", activity: "Burnham Park", icon: "🌲" },
-        { time: "1:00 PM", activity: "Wright Park and The Mansion", icon: "🏛️" },
+        { time: "7:00 AM", activity: "Dragon Castle", icon: "🐉" },
+        { time: "10:00 AM", activity: "Wright Park and The Mansion", icon: "🏛️" },
+        { time: "11:00 AM", activity: "Go Back to Hotel (Prepare for Checkout)", icon: "🏨" },
+        { time: "12:00 PM", activity: "Hotel Checkout", icon: "🧳" },
+        { time: "12:30 PM", activity: "Session Road Look for Luggage Storage", icon: "🧳" },
+        { time: "1:00 PM", activity: "Burnham Park", icon: "🌲" },
       ],
       images: [
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Burnham_Park_Baguio.jpg", alt: "Lake and boats at Burnham Park" },
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Baguio_Public_Market.jpg", alt: "Stalls at Baguio Public Market" },
-        { url: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Wright_Park_Baguio.jpg", alt: "Pool of Pines at Wright Park" }
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b5f4a9017f5a0d85a6469_baguio%20(9).jpg", alt: "Dragon Castle" },
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b607284d5b4d2bd37846c_camp-john-hay.jpg", alt: "Camp John Hay" },
+        { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b5f4bf971754b092e6550_baguio%20(5).jpg", alt: "Wright Park" }
       ],
       color: "#C7FFED"
     }
@@ -205,9 +210,10 @@ export default function ItineraryPresentation() {
                   src={img.url}
                   alt={img.alt}
                   className="w-full aspect-video object-cover rounded-2xl"
+                  style={{ maxHeight: '600px', objectFit: 'cover' }}
                 />
                 <div className="absolute top-2 right-2 w-8 h-8 bg-yellow-300 rounded-full border-3 border-gray-800 flex items-center justify-center transform rotate-12">
-                  <Camera className="w-4 h-4" strokeWidth={3} />
+                  <Camera className="w-4 h-4" strokeWidth={3} color="black" />
                 </div>
               </div>
               <div className="absolute -bottom-3 -right-3 bg-pink-300 px-4 py-2 rounded-full border-3 border-gray-800 font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
@@ -261,7 +267,8 @@ export default function ItineraryPresentation() {
               <img
                 src={selectedImage.url}
                 alt={selectedImage.alt}
-                className="w-full h-auto rounded-2xl"
+                className="w-full rounded-2xl"
+                style={{ maxHeight: '600px', objectFit: 'cover' }}
               />
               <p className="text-center mt-4 text-2xl font-black text-gray-800" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
                 {selectedImage.alt}
@@ -315,6 +322,47 @@ export default function ItineraryPresentation() {
         .animate-fade-in {
           animation: fade-in 0.3s ease-out;
         }
+      {/* Suggestion Form */}
+      <div className="max-w-xl mx-auto mt-12 mb-8 p-6 bg-white rounded-3xl border-4 border-gray-800 shadow-xl">
+        <h2 className="text-2xl font-bold mb-4 text-gray-800">Quick Suggestion</h2>
+        <form
+          className="flex flex-col gap-4"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const form = e.target as HTMLFormElement;
+            const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+            const suggestion = (form.elements.namedItem('suggestion') as HTMLInputElement).value;
+            // Send to your email via API (replace with your endpoint)
+            await fetch('/api/send-suggestion', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, suggestion }),
+            });
+            alert('Thank you for your suggestion!');
+            form.reset();
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Your name"
+            className="border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-400"
+          />
+          <textarea
+            name="suggestion"
+            required
+            placeholder="Your suggestion..."
+            className="border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-400 min-h-[80px]"
+          />
+          <button
+            type="submit"
+            className="bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-6 rounded-lg border-2 border-gray-800 shadow-md transition-all"
+          >
+            Send Suggestion
+          </button>
+        </form>
+      </div>
       `}</style>
     </div>
   );
