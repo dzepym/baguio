@@ -80,7 +80,7 @@ export default function ItineraryPresentation() {
         { time: "11:00 AM", activity: "Go Back to Hotel (Prepare for Checkout)", icon: "🏨" },
         { time: "12:00 PM", activity: "Hotel Checkout", icon: "🧳" },
         { time: "12:30 PM", activity: "Session Road Look for Luggage Storage", icon: "🧳" },
-        { time: "1:00 PM", activity: "Panagbenga Park", icon: "🌲" },
+        { time: "1:00 PM", activity: "To be updated", icon: "🌲" },
       ],
       images: [
         { url: "https://cdn.prod.website-files.com/672218af3918af052de72751/696b5f4a9017f5a0d85a6469_baguio%20(9).jpg", alt: "Dragon Castle" },
