@@ -217,9 +217,6 @@ export default function ItineraryPresentation() {
               }
             })()}
           </h2>
-          {currentDay.subtext && (
-            <div className="text-lg text-gray-500 mb-2 animate-fade-in">{currentDay.subtext}</div>
-          )}
           <div className="flex items-center justify-center gap-2 text-gray-700 text-lg font-bold mb-6">
             <MapPin className="w-6 h-6" strokeWidth={3} />
             <span>{currentDay.location}</span>
