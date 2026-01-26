@@ -340,6 +340,46 @@ export default function ItineraryPresentation() {
       </main>
 
       {/* Image Modal */}
+            {/* Bottom Navigation */}
+            <div className="flex items-center justify-center gap-6 mt-12 mb-8 flex-wrap">
+              <button
+                onClick={prevSlide}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-300 hover:bg-blue-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
+                style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
+              >
+                <ChevronLeft className="w-6 h-6 text-black" strokeWidth={3} />
+                <span>Previous</span>
+              </button>
+
+              <div className="hidden sm:flex gap-2 sm:gap-4 flex-wrap">
+                {itinerary.map((day, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    className={`rounded-full border-3 border-gray-800 transition-all duration-300 font-black text-black ${
+                      idx === currentSlide 
+                        ? 'w-10 h-10 text-base' 
+                        : 'w-8 h-8 opacity-60 hover:opacity-100'
+                    } sm:${idx === currentSlide ? 'w-12 h-12 text-lg' : 'w-10 h-10'} `}
+                    style={{ 
+                      backgroundColor: day.color,
+                      boxShadow: idx === currentSlide ? '3px 3px 0px rgba(0,0,0,0.2)' : 'none'
+                    }}
+                  >
+                    {day.day}
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={nextSlide}
+                className="flex items-center gap-2 px-4 py-2 bg-pink-300 hover:bg-pink-400 rounded-full border-4 border-gray-800 font-black transition-all duration-300 hover:scale-105 shadow-lg text-black text-base sm:px-6 sm:py-3 sm:text-lg"
+                style={{ boxShadow: '4px 4px 0px rgba(0,0,0,0.2)' }}
+              >
+                <span>Next</span>
+                <ChevronRight className="w-6 h-6 text-black" strokeWidth={3} />
+              </button>
+            </div>
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6 animate-fade-in"
